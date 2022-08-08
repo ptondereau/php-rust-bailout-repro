@@ -1,0 +1,10 @@
+[package]
+name = "php-rs-valgrind"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ext-php-rs = "*"
+
+[lib]
+crate-type = ["cdylib"]

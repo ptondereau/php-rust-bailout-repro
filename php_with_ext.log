@@ -1,0 +1,38 @@
+==1042250== Memcheck, a memory error detector
+==1042250== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==1042250== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
+==1042250== Command: php -dextension=target/debug/libphp_rs_valgrind.so index.php
+==1042250== Parent PID: 984863
+==1042250== 
+==1042250== 
+==1042250== HEAP SUMMARY:
+==1042250==     in use at exit: 351 bytes in 8 blocks
+==1042250==   total heap usage: 24,584 allocs, 24,576 frees, 3,466,536 bytes allocated
+==1042250== 
+==1042250== 335 (168 direct, 167 indirect) bytes in 1 blocks are definitely lost in loss record 8 of 8
+==1042250==    at 0x484884F: malloc (vg_replace_malloc.c:381)
+==1042250==    by 0xA2407BB: ???
+==1042250==    by 0xA240846: ???
+==1042250==    by 0xA2414C9: ???
+==1042250==    by 0xA24071C: ???
+==1042250==    by 0xA24BF80: ???
+==1042250==    by 0xA23E2E2: ???
+==1042250==    by 0x3241A9: php_load_extension (in /usr/bin/php8.1)
+==1042250==    by 0x3E11FD: zend_llist_apply (in /usr/bin/php8.1)
+==1042250==    by 0x38FDB4: ??? (in /usr/bin/php8.1)
+==1042250==    by 0x388DED: php_module_startup (in /usr/bin/php8.1)
+==1042250==    by 0x4D51E0: ??? (in /usr/bin/php8.1)
+==1042250==    by 0x22E9E8: ??? (in /usr/bin/php8.1)
+==1042250==    by 0x5161D8F: (below main) (libc_start_call_main.h:58)
+==1042250== 
+==1042250== LEAK SUMMARY:
+==1042250==    definitely lost: 168 bytes in 1 blocks
+==1042250==    indirectly lost: 167 bytes in 6 blocks
+==1042250==      possibly lost: 0 bytes in 0 blocks
+==1042250==    still reachable: 16 bytes in 1 blocks
+==1042250==         suppressed: 0 bytes in 0 blocks
+==1042250== Reachable blocks (those to which a pointer was found) are not shown.
+==1042250== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==1042250== 
+==1042250== For lists of detected and suppressed errors, rerun with: -s
+==1042250== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
