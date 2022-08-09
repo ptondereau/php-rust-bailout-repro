@@ -8,3 +8,6 @@ ext-php-rs = "*"
 
 [lib]
 crate-type = ["cdylib"]
+
+[patch.crates-io]
+ext-php-rs = { path = "/home/ptondereau/Code/rust/ext-php-rs" }
